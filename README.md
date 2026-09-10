@@ -2,7 +2,7 @@
   <img src="./assets/readme/hero.svg" alt="让 Vibe Coding 表达更准确" width="100%">
 </p>
 
-VibeHub Skill 是一个面向普通人的 Vibe Coding 术语表达助手。它把不够准确的口语描述改成可以直接发给 Agent 的专业需求，也会主动指出当前场景里最值得认识的术语，附上通俗解释和 VibeHub 链接。
+在编程交流中识别专业术语，提供通俗解释和可追溯的术语链接，帮助准确表达需求。
 
 它不提供学习路线、课程计划或本地练习，也不会把一句简单需求扩展成教程。
 
@@ -125,3 +125,25 @@ skills/vibehub/
 ## 许可
 
 [MIT](LICENSE)
+
+## 配置、依赖与使用边界
+
+需要 Node.js 与联网能力；运行 bundled 术语解析脚本即可，无账号或 API Key 配置。
+
+只查询脱敏后的短术语，不发送源代码、客户信息或整段需求；引用解析器实际返回的词条 URL，不拼接链接。
+
+使用示例：
+
+```text
+鼠标放到按钮上显示一行说明，这叫什么？
+```
+
+## GitHub 安装
+
+把 [仓库地址](https://github.com/oil-oil/vibe-hub-skill) 交给 Agent，要求按 README 安装；也可运行：
+
+```bash
+npx skills add oil-oil/vibe-hub-skill
+```
+
+安装后由宿主重新加载 Skill。
